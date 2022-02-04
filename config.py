@@ -24,7 +24,7 @@ CSRF_ENABLED = True
 # GLOBALS FOR APP Builder
 # ------------------------------
 # Uncomment to setup Your App name
-# APP_NAME = "My App Name"
+APP_NAME = "Algorithmic Trade By Karimi Brothers"
 
 # Uncomment to setup Setup an App icon
 # APP_ICON = "static/img/logo.jpg"
@@ -40,16 +40,16 @@ CSRF_ENABLED = True
 AUTH_TYPE = AUTH_DB
 
 # Uncomment to setup Full admin role name
-# AUTH_ROLE_ADMIN = 'Admin'
+AUTH_ROLE_ADMIN = 'Admin'
 
 # Uncomment to setup Public role name, no authentication needed
-# AUTH_ROLE_PUBLIC = 'Public'
+AUTH_ROLE_PUBLIC = 'Public'
 
 # Will allow user self registration
-# AUTH_USER_REGISTRATION = True
+AUTH_USER_REGISTRATION = True
 
 # The default user self registration role
-# AUTH_USER_REGISTRATION_ROLE = "Public"
+AUTH_USER_REGISTRATION_ROLE = "Public"
 
 # When using LDAP Auth, setup the ldap server
 # AUTH_LDAP_SERVER = "ldap://ldapserver.new"
@@ -108,3 +108,33 @@ IMG_UPLOAD_URL = "/static/uploads/"
 # APP_THEME = "spacelab.css"
 # APP_THEME = "united.css"
 # APP_THEME = "yeti.css"
+
+# Config for Flask-WTF Recaptcha necessary for user registration
+RECAPTCHA_PUBLIC_KEY = '6Le7vdMSAAAAAI3Lz4w-8ZVBIoNV5QwYqWV9AGD1'
+RECAPTCHA_PRIVATE_KEY = '6Le7vdMSAAAAAPVEK9fUuDni74ErbBlRw4WqRAZv'
+# Config for Flask-Mail necessary for user registration
+# MAIL_SERVER = 'smtp.gmail.com'
+MAIL_SERVER = 'smtp.mail.yahoo.com'
+MAIL_PORT = 465
+MAIL_USE_TLS = False
+MAIL_USE_SSL = True
+# MAIL_USERNAME = 'hpkarimi110@gmail.com'
+MAIL_USERNAME = 'hpkarimi110@yahoo.com'
+MAIL_PASSWORD = 'lpltofpqedoqcyvj'  # App Password
+MAIL_DEFAULT_SENDER = 'hpkarimi110@yahoo.com'
+MAIL_DEBUG = True
+
+OAUTH_PROVIDERS = [
+    {'name': 'google', 'icon': 'fa-google', 'token_key': 'access_token',
+     'remote_app': {
+         'client_id': 'GOOGLE KEY',
+         'client_secret': 'GOOGLE SECRET',
+         'api_base_url': 'https://www.googleapis.com/oauth2/v2/',
+         'client_kwargs': {
+             'scope': 'email profile'
+         },
+         'request_token_url': None,
+         'access_token_url': 'https://accounts.google.com/o/oauth2/token',
+         'authorize_url': 'https://accounts.google.com/o/oauth2/auth'}
+     }
+]
