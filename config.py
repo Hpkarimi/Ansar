@@ -122,7 +122,7 @@ MAIL_USE_SSL = True
 MAIL_USERNAME = 'hpkarimi110@yahoo.com'
 MAIL_PASSWORD = 'lpltofpqedoqcyvj'  # App Password
 MAIL_DEFAULT_SENDER = 'hpkarimi110@yahoo.com'
-MAIL_DEBUG = True
+# MAIL_DEBUG = True
 
 OAUTH_PROVIDERS = [
     {'name': 'google', 'icon': 'fa-google', 'token_key': 'access_token',
